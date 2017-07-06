@@ -1,0 +1,5 @@
+{
+  "name": "headless_wordpress",
+  "private": true,
+  "dependencies": {}
+}
