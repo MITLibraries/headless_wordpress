@@ -1,0 +1,8 @@
+<ul>
+  <% @pages.each do |post| %>
+    <li>
+      <%= link_to(post.title,
+                  page_path(id: post.dig(:id), type: post.dig(:type))) %>
+    </li>
+  <% end %>
+</ul>

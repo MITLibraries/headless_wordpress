@@ -5,11 +5,13 @@ class Page
     WpApiClient.configure do |api_client|
       api_client.endpoint = 'http://libraries.mit.edu/wp-json/wp/v2'
     end
-
-    @api = WpApiClient.get_client
   end
 
   def index
-    @api.get('pages')
+    WpApiClient.get_client.get('pages')
+  end
+
+  def show(id, type)
+    WpApiClient.get_client.get("#{type}s/#{id}")
   end
 end
